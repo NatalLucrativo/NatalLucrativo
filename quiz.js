@@ -119,6 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const showNextSection = () => {
         document.getElementById('quiz').style.display = 'none';
         document.getElementById('final-section').style.display = 'block';
+
+        // Meta Pixel - Evento personalizado para rastrear finalização
+        fbq('trackCustom', 'QuizCompleted');
+
         showTestimonials(); // Exibe os depoimentos
     };
 
@@ -144,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Redirecionar para o checkout
     const redirectToCheckout = () => {
-        window.location.href = 'checkout.html';  // Substitua pelo link do seu checkout
+        window.location.href = 'https://pay.kiwify.com.br/26ph1mf';
     };
 
     // Exportar funções
